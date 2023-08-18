@@ -9,15 +9,6 @@
     text-decoration: none; /* Remove underline */
   }
 
-  /* Visited link style */
-  a:visited {
-    color: #8e44ad; /* Color for visited links */
-  }
-
-  /* Hover link style */
-  a:hover {
-    color: #e74c3c; /* Color for hovered links */
-  }
   body {
     display: flex;
     justify-content: center;
@@ -27,31 +18,63 @@
     background-color: #f0f0f0;
   }
 
-  .box-container {
+  .container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #c8c8c8;
+    padding: 20px;
+    border-radius: 30px;
   }
 
   .box {
-    width: 600px;
+    width: 400px;
     height: 400px;
     justify-content: center;
     align-items: center;
     background-color: #7f7f7f;
     margin: 10px;
     text-align: center;
-    line-height: 200px;
+    line-height: 400px;
     color: #ffffff;
     font-size: 30px;
+    border-radius: 30px;
   }
   .box:hover {
     background-color: #666666; /* Highlighted background color */
   }
+
+  .box-text {
+    display: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0%, -75%);
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .box:hover .box-text {
+    display: block;
+  }
+
+  h1 {
+    font-size: 100px;
+    align-items: flex-start;
+    color: #333333;
+    margin-bottom: 10px;
+  }
 </style>
-<title>Centered Boxes</title>
+<title>CRL Kiosk</title>
 </head>
+
 <body>
-    <a href="attendance/"><div class="box">Attendance</div></a>
-    <a href="projects/"><div class="box">Projects</div></a>
-    <a href="information/"><div class="box">Information</div></a>
+    <h1>Collaborative Robotics Lab</h1>
+    <div class="container">
+    <a href="attendance/"><div class="box">Attendance<div class="box-text">Log in, log out, and sign up</div></div></a>
+    <a href="projects/"><div class="box">Projects<div class="box-text">View in-progress projects, code, and tasks</div></div></a>
+    <a href="information/"><div class="box">Information<div class="box-text">Submit a parts request, check inventory, IDK</div></div></a>
+    </div>
 </body>
 </html>
